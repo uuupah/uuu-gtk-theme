@@ -1,3 +1,5 @@
+# im doing an absolute fucking number on this repo so ignore everthing below for the time being
+
 <h1 align="center">Everforest GTK Theme</h1>
 
 <p align="center">
