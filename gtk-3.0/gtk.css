@@ -1,46 +1,10 @@
-/* GTK NAMED COLORS
-   ----------------
-   use responsibly! */
+@import url("../colors.css");
 
-/* base16 */
-/* # default darker bg, bg0 */
-@define-color base00 #2d353b;
-/* # dark bg, bg1 */
-@define-color base01 #343f44;
-/* # least dark bg, bg2 */
-@define-color base02 #3d484d;
-/* # bright bg, bg3 */
-@define-color base03 #475258;
-/* # dark fg, gray0 */
-@define-color base04 #7a8478;
-/* # default fg, gray1 */
-@define-color base05 #859289;
-/* # light fg, gray2 */
-@define-color base06 #9da9a0;
-/* # lightest fg, fg */
-@define-color base07 #d3c6aa;
-/* # red */
-@define-color base08 #e67e80;
-/* # orange */
-@define-color base09 #e69875;
-/* # yellow */
-@define-color base0A #dbbc7f;
-/* # green */
-@define-color base0B #a7c080;
-/* # cyan, aqua */
-@define-color base0C #83c092;
-/* # blue */
-@define-color base0D #7fbbb3;
-/* # purple */
-@define-color base0E #d699b6;
-/* # dark red or brown, bg_visual */
-@define-color base0F #514045;
+/* @define-color uuu_white #fffbef; */
+@define-color uuu_white @base07;
 
-@define-color uuu_theme_color @base0B;
-@define-color uuu_white #fffbef;
-
-/* colors that were in the codeblock but didnt have an existing colour */
-@define-color uuu_background_dim #232a2e ;
+/* @define-color uuu_background_dim #232a2e ; */
+@define-color uuu_background_dim @base00;
 @define-color uuu_success #9bb86f ;
 @define-color uuu_warning #c68e00 ;
 @define-color uuu_error #f73d39 ;
