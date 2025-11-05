@@ -1,4 +1,4 @@
-@define-color base00 #2d353b;
+@define-color base00 #2D353B;
 @define-color base01 #343f44;
 @define-color base02 #3d484d;
 @define-color base03 #475258;
@@ -15,4 +15,4 @@
 @define-color base0E #d699b6;
 @define-color base0F #514045;
 
-@define-color uuu_theme_color @base0B;
+@define-color theme_color @base0B;
