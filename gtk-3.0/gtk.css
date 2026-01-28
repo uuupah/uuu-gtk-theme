@@ -1,7 +1,5 @@
 @import url("../colors.css");
 
-@define-color toolbarbutton-icon-fill #a7c080;
-
 @define-color background_dim mix(@base00, black, 0.22);
 
 @keyframes ripple {
@@ -66,7 +64,7 @@ modelbutton.flat:selected,
 .nautilus-window flowboxchild:selected .icon-item-background,
 flowbox flowboxchild:selected {
   color: @theme_color;
-  background-color: alpha(@theme_color, 1);
+  background-color: alpha(@theme_color, 0.2);
 }
 
 .nemo-window .nemo-window-pane widget.entry:selected,
@@ -240,7 +238,7 @@ XfdesktopIconView.view .rubberband,
 treeview.view rubberband,
 flowbox rubberband {
   border: 1px solid @theme_color;
-  background-color: alpha(@theme_color, 1);
+  background-color: alpha(@theme_color, 0.3);
 }
 
 flowbox flowboxchild {
@@ -995,7 +993,7 @@ button {
 }
 
 button:focus {
-  box-shadow: 0 0 0 2px alpha(@theme_color, 1);
+  box-shadow: 0 0 0 2px alpha(@theme_color, 0.35);
 }
 
 button:hover {
@@ -9864,6 +9862,155 @@ window.background.chromium menu menuitem:hover {
 /***********
  * Firefox *
  ***********/
+
+#MozillaGtkWidget {
+  color: @base05;
+}
+
+#MozillaGtkWidget decoration {
+  border: none;
+}
+
+#MozillaGtkWidget > widget text {
+  background-color: @base00;
+}
+
+#MozillaGtkWidget > widget text:selected {
+  background-color: @theme_color;
+  color: alpha(@base00, 0.87);
+}
+
+#MozillaGtkWidget > widget > separator {
+  /* color: @base03; */
+  color: @base05;
+}
+
+#MozillaGtkWidget > widget > scrollbar {
+  background-clip: border-box;
+}
+
+#MozillaGtkWidget > widget > frame > border {
+  border-color: @base00;
+}
+
+#MozillaGtkWidget > widget > entry,
+#MozillaGtkWidget > widget > button > button {
+  border: 1px solid @base03;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+#MozillaGtkWidget > widget > entry:disabled,
+#MozillaGtkWidget > widget > button > button:disabled {
+  border-color: alpha(@base07, 0.12);
+}
+
+#MozillaGtkWidget > widget > entry {
+  min-height: 30px;
+  background-color: @base00;
+}
+
+#MozillaGtkWidget > widget > entry:focus {
+  border-color: @theme_color;
+  box-shadow: inset 0 0 0 1px @theme_color;
+}
+
+#MozillaGtkWidget > widget > entry:disabled {
+  background-color: @base00;
+}
+
+#MozillaGtkWidget > widget > button > button {
+  padding: 4px 8px;
+  background-size: auto;
+}
+
+#MozillaGtkWidget > widget > button > button:hover {
+  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
+}
+
+#MozillaGtkWidget > widget > button > button:active {
+  background-image: image(alpha(currentColor, 0.12));
+}
+
+#MozillaGtkWidget > widget > checkbutton > check,
+#MozillaGtkWidget > widget > radiobutton > radio {
+  margin: 0;
+  padding: 0;
+}
+
+#MozillaGtkWidget
+  > widget
+  > checkbutton
+  > check:not(:checked):not(:indeterminate),
+#MozillaGtkWidget
+  > widget
+  > radiobutton
+  > radio:not(:checked):not(:indeterminate) {
+  /* color: @base03; */
+  color: @base05;
+}
+
+#MozillaGtkWidget
+  > widget
+  > checkbutton
+  > check:not(:checked):not(:indeterminate):hover,
+#MozillaGtkWidget
+  > widget
+  > checkbutton
+  > check:not(:checked):not(:indeterminate):active,
+#MozillaGtkWidget
+  > widget
+  > radiobutton
+  > radio:not(:checked):not(:indeterminate):hover,
+#MozillaGtkWidget
+  > widget
+  > radiobutton
+  > radio:not(:checked):not(:indeterminate):active {
+  /* color: @base03; */
+  color: @base05;
+}
+
+#MozillaGtkWidget
+  > widget
+  > checkbutton
+  > check:not(:checked):not(:indeterminate):disabled,
+#MozillaGtkWidget
+  > widget
+  > radiobutton
+  > radio:not(:checked):not(:indeterminate):disabled {
+  /* color: alpha(@base03, 0.5); */
+  color: alpha(@base05, 0.5);
+}
+
+#MozillaGtkWidget menu {
+  border: none;
+}
+
+#MozillaGtkWidget > widget > menubar {
+  color: alpha(@base05, 0.7);
+}
+
+#MozillaGtkWidget > widget > menubar:hover {
+  color: @base05;
+}
+
+#MozillaGtkWidget > widget > menubar:disabled {
+  color: alpha(@base05, 0.32);
+}
+
+#MozillaGtkWidget > widget > frame {
+  /* color: @base03; */
+  color: @base05;
+}
+
+#MozillaGtkWidget menu > separator {
+  /* color: @base03; */
+  color: @base05;
+}
+
+window.background:not(.csd) > window > menu menuitem {
+  transition: none;
+}
 
 /************
  * Inkscape *
