@@ -1,5 +1,7 @@
 @import url("../colors.css");
 
+@define-color toolbarbutton-icon-fill #a7c080;
+
 @define-color background_dim mix(@base00, black, 0.22);
 
 @keyframes ripple {
@@ -64,7 +66,7 @@ modelbutton.flat:selected,
 .nautilus-window flowboxchild:selected .icon-item-background,
 flowbox flowboxchild:selected {
   color: @theme_color;
-  background-color: alpha(@theme_color, 0.2);
+  background-color: alpha(@theme_color, 1);
 }
 
 .nemo-window .nemo-window-pane widget.entry:selected,
@@ -238,7 +240,7 @@ XfdesktopIconView.view .rubberband,
 treeview.view rubberband,
 flowbox rubberband {
   border: 1px solid @theme_color;
-  background-color: alpha(@theme_color, 0.3);
+  background-color: alpha(@theme_color, 1);
 }
 
 flowbox flowboxchild {
@@ -993,7 +995,7 @@ button {
 }
 
 button:focus {
-  box-shadow: 0 0 0 2px alpha(@theme_color, 0.35);
+  box-shadow: 0 0 0 2px alpha(@theme_color, 1);
 }
 
 button:hover {
@@ -8921,7 +8923,7 @@ overlay grid.horizontal > revealer > scrolledwindow.frame:dir(rtl) {
 }
 
 .side-panel .view:selected:hover {
-  background-image: image(alpha(@theme_color, 0.9896));
+  background-image: image(alpha(@theme_color, 1));
 }
 
 .songs-list:hover {
@@ -9862,154 +9864,6 @@ window.background.chromium menu menuitem:hover {
 /***********
  * Firefox *
  ***********/
-#MozillaGtkWidget {
-  color: @base05;
-}
-
-#MozillaGtkWidget decoration {
-  border: none;
-}
-
-#MozillaGtkWidget > widget text {
-  background-color: @base00;
-}
-
-#MozillaGtkWidget > widget text:selected {
-  background-color: @theme_color;
-  color: alpha(@base00, 0.87);
-}
-
-#MozillaGtkWidget > widget > separator {
-  /* color: @base03; */
-  color: @base05;
-}
-
-#MozillaGtkWidget > widget > scrollbar {
-  background-clip: border-box;
-}
-
-#MozillaGtkWidget > widget > frame > border {
-  border-color: @base00;
-}
-
-#MozillaGtkWidget > widget > entry,
-#MozillaGtkWidget > widget > button > button {
-  border: 1px solid @base03;
-  border-radius: 12px;
-  box-shadow: none;
-}
-
-#MozillaGtkWidget > widget > entry:disabled,
-#MozillaGtkWidget > widget > button > button:disabled {
-  border-color: alpha(@base07, 0.12);
-}
-
-#MozillaGtkWidget > widget > entry {
-  min-height: 30px;
-  background-color: @base00;
-}
-
-#MozillaGtkWidget > widget > entry:focus {
-  border-color: @theme_color;
-  box-shadow: inset 0 0 0 1px @theme_color;
-}
-
-#MozillaGtkWidget > widget > entry:disabled {
-  background-color: @base00;
-}
-
-#MozillaGtkWidget > widget > button > button {
-  padding: 4px 8px;
-  background-size: auto;
-}
-
-#MozillaGtkWidget > widget > button > button:hover {
-  box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.08);
-}
-
-#MozillaGtkWidget > widget > button > button:active {
-  background-image: image(alpha(currentColor, 0.12));
-}
-
-#MozillaGtkWidget > widget > checkbutton > check,
-#MozillaGtkWidget > widget > radiobutton > radio {
-  margin: 0;
-  padding: 0;
-}
-
-#MozillaGtkWidget
-  > widget
-  > checkbutton
-  > check:not(:checked):not(:indeterminate),
-#MozillaGtkWidget
-  > widget
-  > radiobutton
-  > radio:not(:checked):not(:indeterminate) {
-  /* color: @base03; */
-  color: @base05;
-}
-
-#MozillaGtkWidget
-  > widget
-  > checkbutton
-  > check:not(:checked):not(:indeterminate):hover,
-#MozillaGtkWidget
-  > widget
-  > checkbutton
-  > check:not(:checked):not(:indeterminate):active,
-#MozillaGtkWidget
-  > widget
-  > radiobutton
-  > radio:not(:checked):not(:indeterminate):hover,
-#MozillaGtkWidget
-  > widget
-  > radiobutton
-  > radio:not(:checked):not(:indeterminate):active {
-  /* color: @base03; */
-  color: @base05;
-}
-
-#MozillaGtkWidget
-  > widget
-  > checkbutton
-  > check:not(:checked):not(:indeterminate):disabled,
-#MozillaGtkWidget
-  > widget
-  > radiobutton
-  > radio:not(:checked):not(:indeterminate):disabled {
-  /* color: alpha(@base03, 0.5); */
-  color: alpha(@base05, 0.5);
-}
-
-#MozillaGtkWidget menu {
-  border: none;
-}
-
-#MozillaGtkWidget > widget > menubar {
-  color: alpha(@base05, 0.7);
-}
-
-#MozillaGtkWidget > widget > menubar:hover {
-  color: @base05;
-}
-
-#MozillaGtkWidget > widget > menubar:disabled {
-  color: alpha(@base05, 0.32);
-}
-
-#MozillaGtkWidget > widget > frame {
-  /* color: @base03; */
-  color: @base05;
-}
-
-#MozillaGtkWidget menu > separator {
-  /* color: @base03; */
-  color: @base05;
-}
-
-window.background:not(.csd) > window > menu menuitem {
-  transition: none;
-}
 
 /************
  * Inkscape *
@@ -12243,3 +12097,118 @@ menubar.-vala-panel-background > menuitem:disabled {
   padding-top: 2px;
   padding-bottom: 2px;
 }
+
+/* GTK NAMED COLORS
+   ----------------
+   use responsibly! */
+/* widget text/foreground color */
+@define-color theme_fg_color @base05;
+/* text color for entries, views and content in general */
+@define-color theme_text_color @base05;
+/* widget base background color */
+@define-color theme_bg_color @base00;
+/* text widgets and the like base background color */
+@define-color theme_base_color @base02;
+/* base background color of selections */
+@define-color theme_selected_bg_color @theme_color;
+/* text/foreground color of selections */
+@define-color theme_selected_fg_color @base05;
+/* base background color of insensitive widgets */
+@define-color insensitive_bg_color @base00;
+/* text foreground color of insensitive widgets */
+/*@define-color insensitive_fg_color rgba(242, 236, 188, 0.5);*/
+@define-color insensitive_fg_color alpha(@base05, 0.5);
+/* insensitive text widgets and the like base background color */
+@define-color insensitive_base_color @base02;
+/* widget text/foreground color on backdrop windows */
+@define-color theme_unfocused_fg_color @base05;
+/* text color for entries, views and content in general on backdrop windows */
+@define-color theme_unfocused_text_color @base05;
+/* widget base background color on backdrop windows */
+@define-color theme_unfocused_bg_color @base00;
+/* text widgets and the like base background color on backdrop windows */
+@define-color theme_unfocused_base_color @base02;
+/* base background color of selections on backdrop windows */
+@define-color theme_unfocused_selected_bg_color @theme_color;
+/* text/foreground color of selections on backdrop windows */
+@define-color theme_unfocused_selected_fg_color @base05;
+/* insensitive color on backdrop windows */
+@define-color unfocused_insensitive_color  alpha(@base05, 0.5);
+/* widgets main borders color */
+@define-color borders alpha(@base05, 0.12);
+/* widgets main borders color on backdrop windows */
+@define-color unfocused_borders alpha(@base05, 0.12);
+/* these are pretty self explicative */
+@define-color warning_color #de9800;
+@define-color error_color #c84053;
+@define-color success_color #6f894e;
+/* these colors are exported for the window manager and shouldn't be used in applications,
+read if you used those and something break with a version upgrade you're on your own... */
+@define-color wm_focused_title @base05;
+@define-color wm_unfocused_title alpha(@base05, 0.7);
+@define-color wm_highlight alpha(@base05, 0.1);
+@define-color wm_border @base01;
+@define-color wm_focused_bg @base00;
+@define-color wm_unfocused_bg @base00;
+@define-color wm_button_icon @base05;
+@define-color wm_button_focused_bg @base00;
+@define-color wm_button_unfocused_bg base00;
+@define-color wm_button_hover_fg alpha(@base00, 0.87);
+@define-color wm_button_active_fg alpha(@base00, 0.87);
+@define-color wm_button_hover_bg @base05;
+@define-color wm_button_active_bg @base05;
+/* FIXME this is really an API */
+@define-color content_view_bg @base02;
+@define-color placeholder_text_color @base06;
+/* Very contrasty background for text views (@theme_text_color foreground) */
+@define-color text_view_bg @base02;
+@define-color STRAWBERRY_100 #FF9262;
+@define-color STRAWBERRY_300 #FF793E;
+@define-color STRAWBERRY_500 #F15D22;
+@define-color STRAWBERRY_700 #CF3B00;
+@define-color STRAWBERRY_900 #AC1800;
+@define-color ORANGE_100 #FFDB91;
+@define-color ORANGE_300 #FFCA40;
+@define-color ORANGE_500 #FAA41A;
+@define-color ORANGE_700 #DE8800;
+@define-color ORANGE_900 #C26C00;
+@define-color BANANA_100 #FFFFA8;
+@define-color BANANA_300 #FFFA7D;
+@define-color BANANA_500 #FFCE51;
+@define-color BANANA_700 #D1A023;
+@define-color BANANA_900 #A27100;
+@define-color LIME_100 #A2F3BE;
+@define-color LIME_300 #8ADBA6;
+@define-color LIME_500 #73C48F;
+@define-color LIME_700 #479863;
+@define-color LIME_900 #1C6D38;
+@define-color BLUEBERRY_100 #94A6FF;
+@define-color BLUEBERRY_300 #6A7CE0;
+@define-color BLUEBERRY_500 #3F51B5;
+@define-color BLUEBERRY_700 #213397;
+@define-color BLUEBERRY_900 #031579;
+@define-color GRAPE_100 #D25DE6;
+@define-color GRAPE_300 #B84ACB;
+@define-color GRAPE_500 #9C27B0;
+@define-color GRAPE_700 #830E97;
+@define-color GRAPE_900 #6A007E;
+@define-color COCOA_100 #9F9792;
+@define-color COCOA_300 #7B736E;
+@define-color COCOA_500 #574F4A;
+@define-color COCOA_700 #463E39;
+@define-color COCOA_900 #342C27;
+@define-color SILVER_100 #EEE;
+@define-color SILVER_300 #CCC;
+@define-color SILVER_500 #AAA;
+@define-color SILVER_700 #888;
+@define-color SILVER_900 #666;
+@define-color SLATE_100 #888;
+@define-color SLATE_300 #666;
+@define-color SLATE_500 #444;
+@define-color SLATE_700 #222;
+@define-color SLATE_900 #111;
+@define-color BLACK_100 #474341;
+@define-color BLACK_300 #403C3A;
+@define-color BLACK_500 #393634;
+@define-color BLACK_700 #33302F;
+@define-color BLACK_900 #2B2928;
