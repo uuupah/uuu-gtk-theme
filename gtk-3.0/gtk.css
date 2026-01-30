@@ -12259,7 +12259,7 @@ menubar.-vala-panel-background > menuitem:disabled {
 /* base background color of selections */
 @define-color theme_selected_bg_color @theme_color;
 /* text/foreground color of selections */
-@define-color theme_selected_fg_color @base05;
+@define-color theme_selected_fg_color @base00;
 /* base background color of insensitive widgets */
 @define-color insensitive_bg_color @base00;
 /* text foreground color of insensitive widgets */
