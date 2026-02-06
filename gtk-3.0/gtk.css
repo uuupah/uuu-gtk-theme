@@ -3493,7 +3493,7 @@ scrollbar slider {
   box-shadow: none;
   outline: none;
   transition: all 200ms linear;
-  background-color: color-mix(in srgb, currentColor 40%, transparent);
+  background-color: mix(currentColor, #00000000, 40%);
 }
 
 scrollbar slider:hover {
@@ -12257,9 +12257,9 @@ menubar.-vala-panel-background > menuitem:disabled {
 /* text widgets and the like base background color */
 @define-color theme_base_color @base02;
 /* base background color of selections */
-@define-color theme_selected_bg_color @theme_color;
+@define-color theme_selected_bg_color mix(@theme_color, @base00, 0.5);
 /* text/foreground color of selections */
-@define-color theme_selected_fg_color @base00;
+@define-color theme_selected_fg_color @theme_color;
 /* base background color of insensitive widgets */
 @define-color insensitive_bg_color @base00;
 /* text foreground color of insensitive widgets */
@@ -12299,7 +12299,7 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_unfocused_bg @base00;
 @define-color wm_button_icon @base05;
 @define-color wm_button_focused_bg @base00;
-@define-color wm_button_unfocused_bg base00;
+@define-color wm_button_unfocused_bg @base00;
 @define-color wm_button_hover_fg alpha(@base00, 0.87);
 @define-color wm_button_active_fg alpha(@base00, 0.87);
 @define-color wm_button_hover_bg @base05;
